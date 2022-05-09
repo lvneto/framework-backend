@@ -17,20 +17,20 @@ export class SubmitNumberUseCase {
   async execute(request: SubmitNumberUseCaseRequest) : Promise<SubmitNumberUseCaseResponse>{
     let { number } = request;
 
-    let result = {
-      number,
-      dividers: [],
-      primeDividers: []
-    } as any
-    
     if (!number) {
       throw new Error('Number is required');
     }
     
     await this.NumbersRepository.create({
       number
-    })      
+    })     
 
+    let result = {
+      number,
+      dividers: [],
+      primeDividers: []
+    } as any 
+    
     result.number = parseInt(number)
     result.dividers = await this.findDividers(result.number)
     result.primeDividers = await this.findPrimeDividers(result.number)
