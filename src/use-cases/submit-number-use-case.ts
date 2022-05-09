@@ -1,3 +1,4 @@
+import { NumberResult } from '../dto/numbers.dto';
 import { NumberCreateData, NumbersRepository }  from '../repositories/numbers-repository'
 interface SubmitNumberUseCaseRequest {
   number: string;
