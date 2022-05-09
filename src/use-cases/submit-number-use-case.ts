@@ -1,13 +1,12 @@
+import { NumbersDTO } from '../dto/numbers.dto';
 import { NumbersRepository }  from '../repositories/numbers-repository'
 interface SubmitNumberUseCaseRequest {
   number: string;
 }
-interface SubmitNumberUseCaseResponse {
-  data: {
-    number: number;
-    dividers: [];
-    primeDividers: [];
-  }  
+interface SubmitNumberUseCaseResponse { 
+    number?: number;
+    dividers?: [];
+    primeDividers?: [];  
 }
 export class SubmitNumberUseCase {
   constructor(
@@ -25,11 +24,7 @@ export class SubmitNumberUseCase {
       number
     })     
 
-    let result = {
-      number,
-      dividers: [],
-      primeDividers: []
-    } as any 
+    const result = new NumbersDTO
     
     result.number = parseInt(number)
     result.dividers = await this.findDividers(result.number)

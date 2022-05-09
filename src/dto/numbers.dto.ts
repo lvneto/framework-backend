@@ -1,5 +1,5 @@
-export interface NumberResult {
-  number: number;
-  dividers: [],
-  primeDividers: [];
+export class NumbersDTO {
+  number?: number;
+  dividers?: [] | any;
+  primeDividers?: [] | any;
 }
