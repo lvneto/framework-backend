@@ -4,9 +4,9 @@ interface SubmitNumberUseCaseRequest {
 }
 interface SubmitNumberUseCaseResponse {
   data: {
-    number?: string;
-    dividers?: [];
-    primeDividers?: [];
+    number: string;
+    dividers: [];
+    primeDividers: [];
   }  
 }
 export class SubmitNumberUseCase {
