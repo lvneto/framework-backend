@@ -15,7 +15,7 @@ export class SubmitNumberUseCase {
   ) {}
 
   async execute(request: SubmitNumberUseCaseRequest) : Promise<SubmitNumberUseCaseResponse>{
-    let { number } = request;
+    const { number } = request;
 
     if (!number) {
       throw new Error('Number is required');
