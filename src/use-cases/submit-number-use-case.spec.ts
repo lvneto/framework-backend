@@ -1,4 +1,5 @@
-import { SubmitNumberUseCase } from "./submit-number-use-case";
+import { SubmitNumberUseCase } from './submit-number-use-case';
+
 
 const createNumberspy = jest.fn();
 
