@@ -1,14 +1,20 @@
-import { NumberResult } from '../dto/numbers.dto';
-import { NumberCreateData, NumbersRepository }  from '../repositories/numbers-repository'
+import { NumbersRepository }  from '../repositories/numbers-repository'
 interface SubmitNumberUseCaseRequest {
   number: string;
+}
+interface SubmitNumberUseCaseResponse {
+  data: {
+    number?: string;
+    dividers?: [];
+    primeDividers?: [];
+  }  
 }
 export class SubmitNumberUseCase {
   constructor(
     private NumbersRepository: NumbersRepository,
   ) {}
 
-  async execute(request: SubmitNumberUseCaseRequest) : Promise<any>{
+  async execute(request: SubmitNumberUseCaseRequest) : Promise<SubmitNumberUseCaseResponse>{
     let { number } = request;
 
     let result = {
