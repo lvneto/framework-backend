@@ -5,7 +5,7 @@ export class PrismaNumbersRepository implements NumbersRepository {
   async create ({ number }: NumberCreateData) {
     await prisma.number.create({
       data: {
-      number
+        number
       }
     })
   }
