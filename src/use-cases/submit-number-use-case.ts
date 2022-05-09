@@ -8,7 +8,7 @@ export class SubmitNumberUseCase {
     private NumbersRepository: NumbersRepository,
   ) {}
 
-  async execute(request: SubmitNumberUseCaseRequest) : Promise<NumberCreateData>{
+  async execute(request: SubmitNumberUseCaseRequest) : Promise<any>{
     let { number } = request;
 
     let result = {
