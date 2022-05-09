@@ -4,7 +4,7 @@ interface SubmitNumberUseCaseRequest {
 }
 interface SubmitNumberUseCaseResponse {
   data: {
-    number: string;
+    number: number;
     dividers: [];
     primeDividers: [];
   }  
