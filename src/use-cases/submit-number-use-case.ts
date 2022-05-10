@@ -47,7 +47,9 @@ export class SubmitNumberUseCase {
   async findPrimeDividers (number: number) {
     const primeDividerList = []
 
-    for (let divider = 1; divider <= number / 2; divider ++) {
+    const numberForTwo = number / 2
+
+    for (let divider = 1; divider <= numberForTwo; divider ++) {
       if (number % divider) {
         primeDividerList.push(divider)
       }
